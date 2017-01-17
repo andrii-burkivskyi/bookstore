@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "all",
+    "name": "All"
+  },
+  {
+    "slug": "design",
+    "name": "Design"
+  },
+  {
+    "slug": "photoshop",
+    "name": "Photoshop"
+  },
+  {
+    "slug": "ui",
+    "name": "UI"
+  },
+  {
+    "slug": "css",
+    "name": "CSS"
+  },
+  {
+    "slug": "html",
+    "name": "HTML"
+  },
+  {
+    "slug": "javascript",
+    "name": "JavaSctipt"
+  }
+]

@@ -1,0 +1,64 @@
+@import '../../../assets/assets';
+
+.container {
+  margin: 0 0 20px;
+  width: 50%;
+  min-height: 180px;
+  padding: 0 10px 20px;
+
+  &:nth-child(-n + 10) {
+    animation-name: opacity;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+  }
+
+  &:nth-child(n + 10) {
+    animation-name: opacityall;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+  }
+
+  .breakpoint(@ipad-p, @one_column);
+
+  @one_column: {
+    width: 100%;
+    padding-left: 0;
+    min-height: 120px;
+  };
+}
+
+.image {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  float: left;
+  line-height: 26px;
+  padding-left: 10px;
+  width: 75%;
+  font-size: 18px;
+  font-family: @righteous;
+
+  & a {
+    .underline(@black, 3px, 3px, left);
+  }
+}
+
+.author {
+  float: right;
+  padding-left: 10px;
+  padding-top: 6px;
+  width: 75%;
+  font-family: @kreon;
+
+  & a {
+    .underline(@black, 2px, 0, left);
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../assets/assets';
+
+.container {
+  flex-direction: column;
+  float: left;
+  width: 100%;
+  padding: 20px 10px;
+  border-top: 1px solid black;
+
+  .breakpoint(@iphone-l, @set-small-layout);
+
+  @set-small-layout: {
+    padding: 20px 0;
+  };
+}
+
+.title {
+  display: block;
+  margin-bottom: 20px;
+  font-family: @righteous;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.item {
+  display: inline-block;
+  width: 100%;
+}
+
+.item a {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: @kreon;
+
+  & {
+    .underline(@black, 2px, 0, left);
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "fileExtensions": [".less", ".css"],
+  "borderZero": { "style": "none" },
+  "decimalZero": { "style": "none" },
+  "duplicateProperty": {
+    "exclude": [ "background" ]
+  },
+  "emptyRule": true,
+  "finalNewLine": true,
+  "hexLength": { "style": "short" },
+  "hexValidation": true,
+  "idSelector": { "exclude": []},
+  "newlineAfterBlock": true,
+  "propertyOrdering": { "enabled": false },
+  "selectorNaming": true,
+  "zeroUnit": { "style": "no_unit" }
+}

@@ -1,0 +1,82 @@
+@import '../../assets/assets';
+
+.container {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  width: 25%;
+
+  .breakpoint(@iphone-l, @set-full-width);
+
+  @set-full-width: {
+    height: 28px;
+    width: 100%;
+    margin-bottom: 20px;
+  };
+}
+
+.item {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  font-family: @righteous;
+  font-size: 18px;
+  line-height: 28px;
+  order: 2;
+  z-index: 100;
+  background-color: @white;
+
+  &:hover {
+    box-shadow: inset 6px 0 0 -2px @black;
+  }
+
+  .breakpoint(@iphone-l, @add-box-shadow);
+
+  @add-box-shadow: {
+    box-shadow: 0 10px 10px fade(@black, 40%);
+
+    &:hover {
+      box-shadow: 0 10px 10px fade(@black, 40%), inset 6px 0 0 -2px @black;
+    }
+  }
+}
+
+.close .item {
+  .breakpoint(@iphone-l, @hide-item);
+
+  @hide-item: {
+    display: none;
+  };
+}
+
+.item.item_active {
+  position: relative;
+  box-shadow: inset 6px 0 0 -2px @black;
+  background-color: fade(@black, 10%);
+
+  .breakpoint(@iphone-l, @move-item-on-top);
+
+  @move-item-on-top: {
+    order: 1;
+    display: block;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 0;
+      height: 0;
+      transform: translateY(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 8px solid @black;
+      transition: transform .5s;
+    }
+
+    .close &:before {
+      transform: translateY(-50%) rotateX(180deg);
+    }
+  };
+}

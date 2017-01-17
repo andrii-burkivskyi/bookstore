@@ -1,0 +1,37 @@
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.breakpoint (@width, @content) {
+  @media only screen and (max-width: @width) {
+    @content();
+  }
+}
+
+.underline (@color, @height, @indent: 0, @animation: center) {
+  transition: background-size .3s;
+  background-size: 0% @height;
+  background-image: linear-gradient(0deg, @color 0%, @color 100%);
+  background-repeat: no-repeat;
+  background-position: bottom @animation;
+  padding-bottom: @indent;
+
+  &:hover {
+    transition: background-size .3s;
+    background-size: 100% @height;
+  }
+}
+
+.underline-static (@color, @height, @indent: 0) {
+  background-size: 100% @height;
+  background-image: linear-gradient(0deg, @color 0%, @color 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: @indent;
+}

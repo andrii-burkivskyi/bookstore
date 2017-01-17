@@ -1,0 +1,54 @@
+@import '../../../assets/assets';
+
+.container {
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  animation-name: opacity;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
+
+.name {
+  & button {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 26px;
+    font-family: @kreon;
+    font-size: 20px;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 40px;
+    transition: transform .3s;
+  }
+
+  &:hover button {
+    transform: translateX(10px);
+    transition: transform .3s;
+  }
+}
+
+.read_more {
+  display: block;
+  font-family: @kreon;
+  font-size: 18px;
+  line-height: 24px;
+  color: @black;
+
+  & a {
+    .underline(@black, 3px, 0, left);
+  }
+}
+
+.book {
+  display: block;
+  font-family: @kreon;
+  font-size: 15px;
+  line-height: 20px;
+
+  & a {
+    .underline(@black, 2px, 0, left);
+  }
+}
